@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 //Classe DAO (Data Acess Object)
 public class DAO {
     //Verificação de Existência do Jogador
-    public boolean existe(Jogador jogador)
+    public boolean existeJogador(Jogador jogador)
             throws Exception{
         String sql = "SELECT * FROM Jogador"
         + "WHERE nome_jogador = ? AND id_turma = ?";
@@ -19,6 +19,23 @@ public class DAO {
         ){
             ps.setString(1,jogador.getNome_jogador());
             ps.setInt(2, jogador.getId_turma());
+            try(ResultSet rs = ps.executeQuery()){
+                return rs.next();
+            }
+        }
+    }
+    public boolean existeProfessor(Professor professor)
+            throws Exception{
+        String sql = "SELECT * FROM Jogador"
+        + "WHERE nome_jogador = ? AND id_turma = ?";
+        
+        try(Connection conn = 
+                ConnectionFactory.obterConexao();
+                PreparedStatement ps = 
+                        conn.prepareStatement(sql)
+        ){
+            ps.setString(1,professor.getEmail_professor());
+            ps.setString(2, professor.getSenha_professor());
             try(ResultSet rs = ps.executeQuery()){
                 return rs.next();
             }
