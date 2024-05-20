@@ -19,6 +19,7 @@ public class Striker {
                     System.out.println("Aluno Iniciando Partida");
                     //Jogo mostra pergunta
                     //Jogador escolhe a resposta
+                    //Se 3 respostas erradas, jogo encerra
                     //exibirPontuação()
                     conta.setLogoutConta(true);
                 }else if(opcoes==2){
