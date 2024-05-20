@@ -1,32 +1,44 @@
 import javax.swing.JOptionPane;
 public class Striker {
     public static void main (String[]args){
-        while(efetuarLogout()==False){
-            int opcao = Integer.parseInt(JOptionPane.showInoutDialog("1-Aluno\n2-Professor"));
+        Conta conta = new Conta(false, false);
+        //Iniciou o sistema
+        while(conta.getLogoutJogo() == false){
+            //Seleção de aluno ou professor
+            int opcao = Integer.parseInt(JOptionPane.showInputDialog("1-Aluno\n2-Professor\n3-Sair do Jogo"));
+            conta.setLogoutConta(false);
+            //Seleção de opções
             if(opcao==1){
-                int opcoes = Integer.parseInt(JOptionPane.showInoutDialog("1-Jogar\n2-Sair"));
+                while(conta.getLogoutConta()==false){
+                int opcoes = Integer.parseInt(JOptionPane.showInputDialog("1-Jogar\n2-Sair"));
                 if(opcoes==1){
-                    System.out.println("Iniciando Partida");
+                    System.out.println("Aluno Iniciando Partida");
                 }
                 else if(opcoes==2){
-                    efetuarLogout(True);
+                    conta.setLogoutConta(true);
                 }else{
-                System.out.println("Seleção inválida");
+                System.out.println("Opcao inválida");
+                }
+                }
+            } 
+            else if(opcao==2){
+                while(conta.getLogoutConta()==false){
+                int opcoes = Integer.parseInt(JOptionPane.showInputDialog("1-Jogar\n2-Sair"));
+                if(opcoes==1){
+                    System.out.println("Professor Iniciando Partida");
+                }
+                else if(opcoes==2){
+                    conta.setLogoutConta(true);
+                }else{
+                System.out.println("Opcao inválida");
+                }
                 }
             }
-            else if(opcao==2){
-                int opcoes = Integer.parseInt(JOptionPane.showInoutDialog("1-Jogar\n2-Sair"));
-                if(opcoes==1){
-                    System.out.println("Iniciando Partida");
-                }
-                else if(opcoes==2){
-                    efetuarLogout(True);
-                }else{
-                System.out.println("Seleção inválida");
-                }
+            else if(opcao==3){
+                conta.setLogoutJogo();
             }
             else{
-                System.out.println("Seleção inválida");
+                System.out.println("Conta inválida");
             }
         }
     }
