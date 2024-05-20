@@ -11,6 +11,11 @@ public class ConnectionFactory {
     private static String usuario = "avnadmin";
     private static String senha = "AVNS_DJ4ArJCcuL6fQgn2jdS";
     
+    /*private static String host = DATABASE_HOST;
+    private static String porta = DATABASE_PORTA;
+    private static String db = DATABASE_DB;
+    private static String usuario = DATABASE_USUARIO;
+    private static String senha = DATABASE_SENHA;*/
     //Método para Obter Conexão
     public static Connection obterConexao()
             throws Exception{

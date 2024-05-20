@@ -10,9 +10,9 @@ public class Professor {
         this.emailProfessor = emailProfessor;
     }
     public String getSenha_professor(){
-        return emailProfessor;
+        return senhaProfessor;
     }
-    public void setSenha_professor(String emailProfessor){
-        this.emailProfessor = emailProfessor;
+    public void setSenha_professor(String senhaProfessor){
+        this.senhaProfessor = senhaProfessor;
     }
 }
