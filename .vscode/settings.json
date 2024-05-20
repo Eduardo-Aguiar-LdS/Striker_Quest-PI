@@ -1,0 +1,17 @@
+/*
+ * Configurações settings.json para o projeto Striker Quest
+ *
+ * Estas configurações serão aplicadas em qualquer aplicação VSCode que abrir o projeto
+ */
+{
+  // Quebrar linhas automáticamente para caber na visualização
+  "diffEditor.wordWrap": "on",
+  "editor.wordWrap": "on",
+
+  // Configurações para arquivos Java (.java)
+  "[java]": {
+    // Formatador Java
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true // formatar ao salvar (Ctrl + S)
+  }
+}
