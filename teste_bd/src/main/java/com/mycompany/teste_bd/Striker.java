@@ -98,8 +98,8 @@ public class Striker {
                             if (opcoes == 1) {
                                 System.out.println("Professor Iniciando Partida");
                                 int contador = 0;
-                                int num_perguntas = 0;
-                                while (contador <= 3 || num_perguntas <= 16) {
+                                int num_perguntas = 1;
+                                while (contador <= 2 || num_perguntas <= 15) {
                                     // Jogo mostra pergunta e resposta
                                     int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
                                                                                                        // numero
