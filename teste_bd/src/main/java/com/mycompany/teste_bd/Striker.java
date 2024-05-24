@@ -37,8 +37,8 @@ public class Striker {
                             if (opcoes == 1) { // Jogar
                                 System.out.println("Aluno Iniciando Partida");
                                 int contador = 0;
-                                int num_perguntas = 0;
-                                while (contador <= 3 || num_perguntas <= 16) {
+                                int num_perguntas = 1;
+                                while (contador <= 2 || num_perguntas <= 15) {
                                     // Jogo mostra pergunta e resposta
                                     int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
                                                                                                        // numero
@@ -51,8 +51,10 @@ public class Striker {
                                     resposta.exibirRespostaDois(perguntas);
                                     resposta.exibirRespostaTres(perguntas);
                                     // Jogador escolhe a resposta
-                                    int id_resposta = Integer.parseInt("Selecionar id da resposta");
+                                    int id_resposta = Integer.parseInt("Selecionar id da resposta"); // Colocar o id da
+                                                                                                     // pergunta
                                     Resposta respondendo = new Resposta(id_resposta);
+                                    // Validação de respostas
                                     if (respondendo.selecionarResposta(respondendo) == true) {
                                         num_perguntas++;
                                         System.out.println("Acertou " + num_perguntas + " perguntas!!!");
@@ -60,6 +62,8 @@ public class Striker {
                                     } else {
                                         contador++;
                                         System.out.println("Errou " + contador + " perguntas!!!");
+                                        num_perguntas++;
+                                        System.out.println("Já foram feitas " + num_perguntas + " perguntas!!!");
                                     }
                                 } // Final do while do contador
                                   // dao.exibirPontuacao(true);
@@ -112,8 +116,10 @@ public class Striker {
                                     resposta.exibirRespostaDois(perguntas);
                                     resposta.exibirRespostaTres(perguntas);
                                     // Jogador escolhe a resposta
-                                    int id_resposta = Integer.parseInt("Selecionar id da resposta");
+                                    int id_resposta = Integer.parseInt("Selecionar id da resposta"); // Colocar o id da
+                                                                                                     // pergunta
                                     Resposta respondendo = new Resposta(id_resposta);
+                                    // Validação de respostas
                                     if (respondendo.selecionarResposta(respondendo) == true) {
                                         num_perguntas++;
                                         System.out.println("Acertou " + num_perguntas + " perguntas!!!");
@@ -121,6 +127,8 @@ public class Striker {
                                     } else {
                                         contador++;
                                         System.out.println("Errou " + contador + " perguntas!!!");
+                                        num_perguntas++;
+                                        System.out.println("Já foram feitas " + num_perguntas + " perguntas!!!");
                                     }
                                 } // Final do while do contador
                                   // dao.exibirPontuacao(true);
