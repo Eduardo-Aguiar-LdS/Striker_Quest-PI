@@ -6,11 +6,10 @@ import java.sql.ResultSet;
 
 //Classe DAO (Data Acess Object)
 public class DAO {
-    //Verificação de Existência do Jogador
-    public boolean existeJogador(Jogador jogador)
+    //Verificação de Existência de Cadastro Jogador Professor
+    public boolean existeCadastroJogador(Jogador jogador)
             throws Exception{
-        String sql = "SELECT * FROM Jogador"
-        + "WHERE nome_jogador = ? AND id_turma = ?";
+        String sql = "SELECT * FROM Jogador WHERE nome_jogador = ? AND id_turma = ?";
         
         try(Connection conn = 
                 ConnectionFactory.obterConexao();
@@ -24,9 +23,26 @@ public class DAO {
             }
         }
     }
+    //Verificação de Existência do Jogador Para autenticação
+    public boolean existeJogador(Jogador jogador, Turma turma)
+            throws Exception{
+        String sql = "SELECT nome_jogador, nome_turma FROM Jogador j JOIN Turma t ON j.id_turma = t.id_turma where nome_jogador = ? AND nome_turma = ?";
+        
+        try(Connection conn = 
+                ConnectionFactory.obterConexao();
+                PreparedStatement ps = 
+                        conn.prepareStatement(sql)
+        ){
+            ps.setString(1,jogador.getNome_jogador());
+            ps.setString(2, turma.getNome_turma());
+            try(ResultSet rs = ps.executeQuery()){
+                return rs.next();
+            }
+        }
+    }
+
     public boolean professorExiste(Professor professor)throws Exception{
-        String sql = "SELECT * FROM Professor"
-        + "WHERE email = ? AND senha = ?";
+        String sql = "SELECT * FROM Professor WHERE email = ? AND senha = ?";
         
         try(Connection conn = 
                 ConnectionFactory.obterConexao();
@@ -41,8 +57,7 @@ public class DAO {
         }
     }
     public boolean turmaExiste(Turma turma)throws Exception{
-        String sql = "SELECT nome_turma,id_turma FROM Professor"
-        + "WHERE nome_turma = ? AND id_turma = ?";
+        String sql = "SELECT nome_turma, id_turma FROM Turma WHERE nome_turma = ? AND id_turma = ?";
         
         try(Connection conn = 
                 ConnectionFactory.obterConexao();
@@ -58,8 +73,7 @@ public class DAO {
     }
     public boolean exibirPontuacao(boolean varExibirPontuacao)
             throws Exception{
-        String sql = "SELECT nome_jogador, maior_pontuacao, id_turma FROM Jogador"
-        + "WHERE nome_jogador = ? AND maior_pontuacao AND id_turma = ?";
+        String sql = "SELECT nome_jogador, maior_pontuacao, id_turma FROM Jogador WHERE nome_jogador = ? AND maior_pontuacao AND id_turma = ?";
         
         try(Connection conn = 
                 ConnectionFactory.obterConexao();

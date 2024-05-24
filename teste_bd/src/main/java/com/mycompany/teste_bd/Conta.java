@@ -7,11 +7,13 @@ import java.sql.ResultSet;
 public class Conta{
     private boolean logoutJogo = false;
     private boolean logoutConta = false;
+    private boolean logoutVerificacao = false;
     private boolean logoutMenu = false;
         
-    public Conta(boolean logoutJogo, boolean logoutConta, boolean logoutMenu){
+    public Conta(boolean logoutJogo, boolean logoutConta, boolean logoutVerificacao, boolean logoutMenu){
         this.logoutJogo = false;
         this.logoutConta = false;
+        this.logoutVerificacao = false;
         this.logoutMenu = false;
     }
     
@@ -33,17 +35,25 @@ public class Conta{
         return logoutConta;
     }
     
+    //Entrar e sair da verificação de conta
+    public boolean setLogoutVerificacao(boolean varOkDois){
+        return this.logoutVerificacao = varOkDois;
+    }
+    
+    public boolean getLogoutVerificacao(){
+        return logoutVerificacao;
+    }
+    
     //Entrar e sair para menu principal
-    public boolean setLogoutMenu(boolean varOkDois){
-        return this.logoutMenu = varOkDois;
+    public boolean setLogoutMenu(boolean varOkTres){
+        return this.logoutMenu = varOkTres;
     }
     public boolean getLogoutMenu(){
         return logoutMenu;
     }
 
     public boolean inserirNomeJogador(String nome_jogador)throws Exception{
-        String sql = "SELECT nome_jogador FROM Jogador"
-        + "WHERE nome_jogador = ? ";
+        String sql = "SELECT nome_jogador FROM Jogador WHERE nome_jogador = ? ";
         
         try(Connection conn = 
                 ConnectionFactory.obterConexao();
@@ -57,8 +67,7 @@ public class Conta{
     }
 
     public boolean inserirNomeTurma(int id_turma)throws Exception{
-        String sql = "SELECT id_turma FROM Jogador"
-        + "WHERE id_jogador = ? ";
+        String sql = "SELECT id_turma FROM Jogador WHERE id_jogador = ? ";
         
         try(Connection conn = 
                 ConnectionFactory.obterConexao();

@@ -4,6 +4,10 @@ public class Turma {
     private String nome_turma;
     private int id_professor;
 
+    public Turma(String nome_turma){
+        this.nome_turma = nome_turma;
+    }
+    
     public Turma(String nome_turma, int id_professor){
         this.nome_turma = nome_turma;
         this.id_professor = id_professor;

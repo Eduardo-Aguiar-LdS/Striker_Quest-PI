@@ -8,6 +8,10 @@ public class Jogador {
     private int maior_pontuacao;
     private int id_turma;
     
+    public Jogador(String nome_jogador){
+        this.nome_jogador = nome_jogador;
+    }
+
     public Jogador(String nome_jogador, String rg, int id_turma){
         this.nome_jogador = nome_jogador;
         this.rg = rg;
