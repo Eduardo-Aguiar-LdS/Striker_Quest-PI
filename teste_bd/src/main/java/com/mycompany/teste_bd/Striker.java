@@ -36,9 +36,33 @@ public class Striker {
                         while (conta.getLogoutMenu() == false) {
                             if (opcoes == 1) { // Jogar
                                 System.out.println("Aluno Iniciando Partida");
-                                // Jogo mostra pergunta
-                                // Jogador escolhe a resposta
-                                // dao.exibirPontuacao(true);
+                                int contador = 0;
+                                int num_perguntas = 0;
+                                while (contador <= 3 || num_perguntas <= 16) {
+                                    // Jogo mostra pergunta e resposta
+                                    int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
+                                                                                                       // numero
+                                                                                                       // aletorio
+                                    Pergunta perguntas = new Pergunta(id_pergunta);
+                                    perguntas.exibirPergunta(perguntas);
+                                    Resposta resposta = new Resposta();
+                                    resposta.exibirRespostaCorreta(perguntas);
+                                    resposta.exibirRespostaUm(perguntas);
+                                    resposta.exibirRespostaDois(perguntas);
+                                    resposta.exibirRespostaTres(perguntas);
+                                    // Jogador escolhe a resposta
+                                    int id_resposta = Integer.parseInt("Selecionar id da resposta");
+                                    Resposta respondendo = new Resposta(id_resposta);
+                                    if (respondendo.selecionarResposta(respondendo) == true) {
+                                        num_perguntas++;
+                                        System.out.println("Acertou " + num_perguntas + " perguntas!!!");
+                                        // Receber ponto
+                                    } else {
+                                        contador++;
+                                        System.out.println("Errou " + contador + " perguntas!!!");
+                                    }
+                                } // Final do while do contador
+                                  // dao.exibirPontuacao(true);
                                 conta.setLogoutMenu(true);
                             } else if (opcoes == 2) { // Exibir pontuação
                                 // dao.exibirPontuacao(true);
@@ -73,19 +97,43 @@ public class Striker {
                         while (conta.getLogoutMenu() == false) {
                             if (opcoes == 1) {
                                 System.out.println("Professor Iniciando Partida");
-                                // Jogo mostra pergunta
-                                // Jogador escolhe a resposta
-                                // Se 3 respostas erradas, jogo encerra
-                                // dao.exibirPontuacao(true);
+                                int contador = 0;
+                                int num_perguntas = 0;
+                                while (contador <= 3 || num_perguntas <= 16) {
+                                    // Jogo mostra pergunta e resposta
+                                    int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
+                                                                                                       // numero
+                                                                                                       // aletorio
+                                    Pergunta perguntas = new Pergunta(id_pergunta);
+                                    perguntas.exibirPergunta(perguntas);
+                                    Resposta resposta = new Resposta();
+                                    resposta.exibirRespostaCorreta(perguntas);
+                                    resposta.exibirRespostaUm(perguntas);
+                                    resposta.exibirRespostaDois(perguntas);
+                                    resposta.exibirRespostaTres(perguntas);
+                                    // Jogador escolhe a resposta
+                                    int id_resposta = Integer.parseInt("Selecionar id da resposta");
+                                    Resposta respondendo = new Resposta(id_resposta);
+                                    if (respondendo.selecionarResposta(respondendo) == true) {
+                                        num_perguntas++;
+                                        System.out.println("Acertou " + num_perguntas + " perguntas!!!");
+                                        // Receber ponto
+                                    } else {
+                                        contador++;
+                                        System.out.println("Errou " + contador + " perguntas!!!");
+                                    }
+                                } // Final do while do contador
+                                  // dao.exibirPontuacao(true);
                                 conta.setLogoutMenu(true);
                             } else if (opcoes == 2) {
                                 // Entrada de dados da turma
                                 String nome_turma = JOptionPane.showInputDialog(null, "Insira o nome da turma");
-                                int id_professor = Integer.parseInt(JOptionPane.showInputDialog(null, "Insira seu id"));
+                                int id_professor = Integer
+                                        .parseInt(JOptionPane.showInputDialog(null, "Insira seu id de professor"));
                                 Turma turma = new Turma(nome_turma, id_professor);
                                 // Validando turma
                                 try {
-                                    if (dao.turmaExiste(turma)) { // Não está funcionando
+                                    if (dao.turmaExiste(turma)) {
                                         JOptionPane.showMessageDialog(null, "Turma existente");
                                     } else {
                                         professor.cadastrarTurma(turma);
@@ -114,8 +162,33 @@ public class Striker {
                                 }
                                 conta.setLogoutMenu(true);
                             } else if (opcoes == 4) {
-                                // cadastrarPergunta(pergunta, resposta_correta, resposta1, resposta2,
-                                // resposta3)
+                                String pergunta = JOptionPane.showInputDialog(null, "Insira sua pergunta");
+                                int id_professor = Integer
+                                        .parseInt(JOptionPane.showInputDialog(null, "Insira seu id de professor"));
+                                String resposta_correta = JOptionPane.showInputDialog(null,
+                                        "Insira a resposta correta");
+                                String resposta_um = JOptionPane.showInputDialog(null,
+                                        "Insira uma resposta alternativa incorreta");
+                                String resposta_dois = JOptionPane.showInputDialog(null,
+                                        "Insira uma resposta alternativa incorreta");
+                                String resposta_tres = JOptionPane.showInputDialog(null,
+                                        "Insira uma resposta alternativa incorreta");
+                                int id_pergunta = Integer
+                                        .parseInt(JOptionPane.showInputDialog(null, "Insira o id da sua pergunta"));
+                                Pergunta perguntas = new Pergunta(pergunta, id_professor);
+                                Resposta resposta = new Resposta(resposta_correta, resposta_um, resposta_dois,
+                                        resposta_tres, id_pergunta);
+                                // Validando Perguntas e professor
+                                try {
+                                    if (dao.perguntaExiste(perguntas, resposta)) {
+                                        JOptionPane.showMessageDialog(null, "Pergunta e respostas existentes");
+                                    } else {
+                                        professor.cadastrarPergunta(perguntas);
+                                        JOptionPane.showMessageDialog(null, "Pergunta e respostas cadastradas");
+                                    }
+                                } catch (Exception e) {
+                                    JOptionPane.showMessageDialog(null, "Problemas Técnicos em Cadastrar Perguntas");
+                                }
                                 conta.setLogoutMenu(true);
                             } else if (opcoes == 5) {
                                 // dao.exibirPontuacao(true);
