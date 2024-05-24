@@ -1,7 +1,6 @@
 package com.mycompany.teste_bd;
 
 public class Jogador {
-    private int id_jogador;
     private String nome_jogador;
     private String rg;
     private int pontuacao;

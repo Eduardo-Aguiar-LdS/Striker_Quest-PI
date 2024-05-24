@@ -44,17 +44,13 @@ public class Professor {
         }
     }
 
-    /*public String cadastrarPergunta(String pergunta, String resposta_certa, String resposta_um, String resposta_dois, String resposta_tres)throws Exception{
-        String sql = "INSERT senha FROM Professor WHERE senha = ? ";
+    public void cadastrarPergunta(Pergunta perguntas)throws Exception{
+        String sql = "INSERT INTO Pergunta(pergunta, ) ";
         
-        try(Connection conn = 
-                ConnectionFactory.obterConexao();
-                PreparedStatement ps = 
-                        conn.prepareStatement(sql)
-        ){
-            try(ResultSet rs = ps.executeQuery()){
-                return rs.next();
-            }
+        try(Connection conexao = ConnectionFactory.obterConexao(); PreparedStatement ps = conexao.prepareStatement(sql)){
+            ps.setString(1,perguntas.getPergunta());
+            ps.setInt(2, perguntas.getId_Professor());
+            ps.execute();
         }
-    }*/
+    }
 }
