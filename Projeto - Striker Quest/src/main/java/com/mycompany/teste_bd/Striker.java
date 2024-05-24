@@ -1,10 +1,10 @@
 package com.mycompany.teste_bd;
 
 // import java.lang.classfile.TypeAnnotation.TypeArgumentTarget;
-
 import javax.swing.JOptionPane;
 
 public class Striker {
+
     public static void main(String[] args) throws Exception {
         // Criação de Objetos
         Conta conta = new Conta(false, false, false, false);
@@ -39,20 +39,36 @@ public class Striker {
                                 int contador = 0;
                                 int num_perguntas = 1;
                                 while (contador <= 2 || num_perguntas <= 15) {
+                                    String p1 = JOptionPane.showInputDialog(null, "Quanto é 5 + 3?");
+                                    String p2 = JOptionPane.showInputDialog(null, "Quanto é 15 - 7?");
+                                    String p3 = JOptionPane.showInputDialog(null, "Quanto é 8 + 12?");
+                                    String p4 = JOptionPane.showInputDialog(null, "Quanto é 20 - 9?");
+                                    String p5 = JOptionPane.showInputDialog(null, "Quanto é 14 + 6?");
+                                    String p6 = JOptionPane.showInputDialog(null, "Quanto é 18 - 4?");
+                                    String p7 = JOptionPane.showInputDialog(null, "Quanto é 9 + 9?");
+                                    String p8 =JOptionPane.showInputDialog(null, "Quanto é 22 - 13?");
+                                    String p9 =JOptionPane.showInputDialog(null, "Quanto é 11 + 7?");
+                                    String p10 =JOptionPane.showInputDialog(null, "Quanto é 16 - 8?");
+                                    String p11 =JOptionPane.showInputDialog(null, "Quanto é 7 + 5?");
+                                    String p12 =JOptionPane.showInputDialog(null, "Quanto é 13 - 6?");
+                                    String p13 =JOptionPane.showInputDialog(null, "Quanto é 4 + 4?");
+
+                                    String p14 =JOptionPane.showInputDialog(null, "Quanto é 19 - 11?");
+                                    String p15 =JOptionPane.showInputDialog(null, "Quanto é 39 + 2?");
                                     // Jogo mostra pergunta e resposta
-                                    int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
-                                                                                                       // numero
-                                                                                                       // aletorio
-                                    Pergunta perguntas = new Pergunta(id_pergunta);
-                                    perguntas.exibirPergunta(perguntas);
+                                    //int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
+                                    // numero
+                                    // aletorio
+                                    //Pergunta perguntas = new Pergunta(id_pergunta);
+                                    //perguntas.exibirPergunta(perguntas);
                                     Resposta resposta = new Resposta();
-                                    resposta.exibirRespostaCorreta(perguntas);
-                                    resposta.exibirRespostaUm(perguntas);
-                                    resposta.exibirRespostaDois(perguntas);
-                                    resposta.exibirRespostaTres(perguntas);
+                                    //resposta.exibirRespostaCorreta(perguntas);
+                                    //resposta.exibirRespostaUm(perguntas);
+                                    //resposta.exibirRespostaDois(perguntas);
+                                    //resposta.exibirRespostaTres(perguntas);
                                     // Jogador escolhe a resposta
                                     int id_resposta = Integer.parseInt("Selecionar id da resposta"); // Colocar o id da
-                                                                                                     // pergunta
+                                    // pergunta
                                     Resposta respondendo = new Resposta(id_resposta);
                                     // Validação de respostas
                                     if (respondendo.selecionarResposta(respondendo) == true) {
@@ -66,7 +82,7 @@ public class Striker {
                                         System.out.println("Já foram feitas " + num_perguntas + " perguntas!!!");
                                     }
                                 } // Final do while do contador
-                                  // dao.exibirPontuacao(true);
+                                // dao.exibirPontuacao(true);
                                 conta.setLogoutMenu(true);
                             } else if (opcoes == 2) { // Exibir pontuação
                                 // dao.exibirPontuacao(true);
@@ -106,18 +122,18 @@ public class Striker {
                                 while (contador <= 2 || num_perguntas <= 15) {
                                     // Jogo mostra pergunta e resposta
                                     int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
-                                                                                                       // numero
-                                                                                                       // aletorio
+                                    // numero
+                                    // aletorio
                                     Pergunta perguntas = new Pergunta(id_pergunta);
-                                    perguntas.exibirPergunta(perguntas);
+                                    //perguntas.exibirPergunta(perguntas);
                                     Resposta resposta = new Resposta();
-                                    resposta.exibirRespostaCorreta(perguntas);
-                                    resposta.exibirRespostaUm(perguntas);
-                                    resposta.exibirRespostaDois(perguntas);
-                                    resposta.exibirRespostaTres(perguntas);
+                                    //resposta.exibirRespostaCorreta(perguntas);
+                                    //resposta.exibirRespostaUm(perguntas);
+                                    //resposta.exibirRespostaDois(perguntas);
+                                    //resposta.exibirRespostaTres(perguntas);
                                     // Jogador escolhe a resposta
                                     int id_resposta = Integer.parseInt("Selecionar id da resposta"); // Colocar o id da
-                                                                                                     // pergunta
+                                    // pergunta
                                     Resposta respondendo = new Resposta(id_resposta);
                                     // Validação de respostas
                                     if (respondendo.selecionarResposta(respondendo) == true) {
@@ -131,7 +147,7 @@ public class Striker {
                                         System.out.println("Já foram feitas " + num_perguntas + " perguntas!!!");
                                     }
                                 } // Final do while do contador
-                                  // dao.exibirPontuacao(true);
+                                // dao.exibirPontuacao(true);
                                 conta.setLogoutMenu(true);
                             } else if (opcoes == 2) {
                                 // Entrada de dados da turma

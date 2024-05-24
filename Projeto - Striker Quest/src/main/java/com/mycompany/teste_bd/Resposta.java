@@ -77,41 +77,41 @@ public class Resposta {
         this.id_pergunta = id_pergunta;
     }
 
-    public String exibirRespostaCorreta(Pergunta perguntas) throws Exception {
+    /*public String exibirRespostaCorreta(Pergunta perguntas) throws Exception {
         String sql = "SELECT resposta_correta FROM Resposta WHERE id_pergunta = ?";
         try (Connection conn = ConnectionFactory.obterConexao();
                 PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setInt(1, perguntas.getId_Pergunta());
             return ps.execute(); // Pesquisar como retornar uma String
         }
-    }
+    }*/
 
-    public String exibirRespostaUm(Pergunta perguntas) throws Exception {
+    /*public String exibirRespostaUm(Pergunta perguntas) throws Exception {
         String sql = "SELECT resposta_um FROM Resposta WHERE id_pergunta = ?";
         try (Connection conn = ConnectionFactory.obterConexao();
                 PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setInt(1, perguntas.getId_Pergunta());
             return ps.execute(); // Pesquisar como retornar uma String
         }
-    }
+    }*/
 
-    public String exibirRespostaDois(Pergunta perguntas) throws Exception {
+    /*public String exibirRespostaDois(Pergunta perguntas) throws Exception {
         String sql = "SELECT resposta_dois FROM Resposta WHERE id_pergunta = ?";
         try (Connection conn = ConnectionFactory.obterConexao();
                 PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setInt(1, perguntas.getId_Pergunta());
             return ps.execute(); // Pesquisar como retornar uma String
         }
-    }
+    }*/
 
-    public String exibirRespostaTres(Pergunta perguntas) throws Exception {
+    /*public String exibirRespostaTres(Pergunta perguntas) throws Exception {
         String sql = "SELECT resposta_tres FROM Resposta WHERE id_pergunta = ?";
         try (Connection conn = ConnectionFactory.obterConexao();
                 PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setInt(1, perguntas.getId_Pergunta());
             return ps.execute(); // Pesquisar como retornar uma String
         }
-    }
+    }*/
 
     public boolean selecionarResposta(Resposta resposta) throws Exception {
         String sql = "SELECT resposta_correta FROM Resposta WHERE id_resposta = ?";

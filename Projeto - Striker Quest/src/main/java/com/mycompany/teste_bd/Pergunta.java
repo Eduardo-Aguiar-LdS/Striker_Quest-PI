@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Pergunta {
+
     private int id_pergunta;
     private String pergunta;
     private int id_professor;
@@ -41,7 +42,7 @@ public class Pergunta {
     public void setId_Profesor(int id_professor) {
         this.id_professor = id_professor;
     }
-
+    /*
     public String exibirPergunta(Pergunta perguntas) throws Exception {
         String sql = "SELECT pergunta FROM Pergunta WHERE id_pergunta = ?";
         try (Connection conn = ConnectionFactory.obterConexao();
@@ -49,5 +50,5 @@ public class Pergunta {
             ps.setInt(1, perguntas.getId_Pergunta());
             return ps.execute(); // Pesquisar como retornar uma String
         }
-    }
+    }*/
 }
