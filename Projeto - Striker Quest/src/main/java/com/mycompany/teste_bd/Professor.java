@@ -50,29 +50,4 @@ public class Professor {
             ps.execute();
         }
     }
-
-    public void cadastrarPergunta(Pergunta perguntas) throws Exception {
-        String sql = "INSERT INTO Pergunta(pergunta, id_professor)" +
-                " VALUES (?, ?);";
-        try (Connection conexao = ConnectionFactory.obterConexao();
-                PreparedStatement ps = conexao.prepareStatement(sql)) {
-            ps.setString(1, perguntas.getPergunta());
-            ps.setInt(2, perguntas.getId_Professor());
-            ps.execute();
-        }
-    }
-
-    public void cadastrarResposta(Resposta resposta) throws Exception {
-        String sql = "INSERT INTO Resposta(resposta_correta, resposta_um, resposta_dois, resposta_tres, id_pergunta)" +
-                " VALUES (?, ?, ?, ?, ?);";
-        try (Connection conexao = ConnectionFactory.obterConexao();
-                PreparedStatement ps = conexao.prepareStatement(sql)) {
-            ps.setString(1, resposta.getRespostaCorreta());
-            ps.setString(2, resposta.getRespostaUm());
-            ps.setString(3, resposta.getRespostaDois());
-            ps.setString(4, resposta.getRespostaTres());
-            ps.setInt(5, resposta.getId_Pergunta());
-            ps.execute();
-        }
-    }
 }

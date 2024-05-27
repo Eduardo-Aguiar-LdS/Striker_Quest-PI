@@ -61,26 +61,9 @@ public class DAO {
         }
     }
 
-    public boolean perguntaExiste(Pergunta perguntas, Resposta resposta) throws Exception {
-        String sql = "SELECT p.pergunta, r.resposta_correta, r.resposta_um, r.resposta_dois, r.resposta_tres FROM Pergunta p JOIN Resposta r ON p.id_pergunta = r.id_pergunta where p.pergunta = ? AND r.resposta_correta = ? AND r.resposta_um = ? AND r.resposta_dois = ? AND r.resposta_tres = ?";
-
-        try (Connection conn = ConnectionFactory.obterConexao();
-                PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setString(1, perguntas.getPergunta());
-            ps.setString(2, resposta.getRespostaCorreta());
-            ps.setString(3, resposta.getRespostaUm());
-            ps.setString(4, resposta.getRespostaDois());
-            ps.setString(5, resposta.getRespostaTres());
-            try (ResultSet rs = ps.executeQuery()) {
-                return rs.next();
-            }
-        }
-    }
-
     public boolean exibirPontuacao(boolean varExibirPontuacao)
             throws Exception {
-        String sql = "SELECT nome_jogador, maior_pontuacao, id_turma FROM Jogador WHERE nome_jogador = ? AND maior_pontuacao AND id_turma = ?";
-
+        String sql = "SELECT nome_jogador, maior_pontuacao, id_turma FROM Jogador WHERE nome_jogador = ? AND id_turma = ?";
         try (Connection conn = ConnectionFactory.obterConexao();
                 PreparedStatement ps = conn.prepareStatement(sql)) {
             try (ResultSet rs = ps.executeQuery()) {

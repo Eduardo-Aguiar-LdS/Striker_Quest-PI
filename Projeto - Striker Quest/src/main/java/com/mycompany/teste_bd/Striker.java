@@ -96,7 +96,7 @@ public class Striker {
                     conta.setLogoutVerificacao(false);
                     while (conta.getLogoutVerificacao() == false) {
                         int opcoes = Integer.parseInt(JOptionPane.showInputDialog(
-                                "1-Jogar\n2-Cadastrar turma\n3-Cadastrar aluno\n4-Cadastrar pergunta\n5-Exibir pontuação\n6-Sair"));
+                                "1-Jogar\n2-Cadastrar turma\n3-Cadastrar aluno\n4-Exibir pontuação\n5-Sair"));
                         conta.setLogoutMenu(false);
                         while (conta.getLogoutMenu() == false) {
                             if (opcoes == 1) {
@@ -106,10 +106,17 @@ public class Striker {
                                 while (contador <= 2 || num_perguntas <= 15) {
                                     // Jogo mostra pergunta e resposta
                                     int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
+<<<<<<< Updated upstream
                                                                                                        // numero
                                                                                                        // aletorio
                                     Pergunta perguntas = new Pergunta(id_pergunta);
                                     perguntas.exibirPergunta(perguntas);
+=======
+                                    // numero
+                                    // aletorio
+                                   // Pergunta perguntas = new Pergunta(id_pergunta);
+                                    //perguntas.exibirPergunta(perguntas);
+>>>>>>> Stashed changes
                                     Resposta resposta = new Resposta();
                                     resposta.exibirRespostaCorreta(perguntas);
                                     resposta.exibirRespostaUm(perguntas);
@@ -170,38 +177,9 @@ public class Striker {
                                 }
                                 conta.setLogoutMenu(true);
                             } else if (opcoes == 4) {
-                                String pergunta = JOptionPane.showInputDialog(null, "Insira sua pergunta");
-                                int id_professor = Integer
-                                        .parseInt(JOptionPane.showInputDialog(null, "Insira seu id de professor"));
-                                String resposta_correta = JOptionPane.showInputDialog(null,
-                                        "Insira a resposta correta");
-                                String resposta_um = JOptionPane.showInputDialog(null,
-                                        "Insira uma resposta alternativa incorreta");
-                                String resposta_dois = JOptionPane.showInputDialog(null,
-                                        "Insira uma resposta alternativa incorreta");
-                                String resposta_tres = JOptionPane.showInputDialog(null,
-                                        "Insira uma resposta alternativa incorreta");
-                                int id_pergunta = Integer
-                                        .parseInt(JOptionPane.showInputDialog(null, "Insira o id da sua pergunta"));
-                                Pergunta perguntas = new Pergunta(pergunta, id_professor);
-                                Resposta resposta = new Resposta(resposta_correta, resposta_um, resposta_dois,
-                                        resposta_tres, id_pergunta);
-                                // Validando Perguntas e professor
-                                try {
-                                    if (dao.perguntaExiste(perguntas, resposta)) {
-                                        JOptionPane.showMessageDialog(null, "Pergunta e respostas existentes");
-                                    } else {
-                                        professor.cadastrarPergunta(perguntas);
-                                        JOptionPane.showMessageDialog(null, "Pergunta e respostas cadastradas");
-                                    }
-                                } catch (Exception e) {
-                                    JOptionPane.showMessageDialog(null, "Problemas Técnicos em Cadastrar Perguntas");
-                                }
-                                conta.setLogoutMenu(true);
-                            } else if (opcoes == 5) {
                                 // dao.exibirPontuacao(true);
                                 conta.setLogoutMenu(true);
-                            } else if (opcoes == 6) {
+                            } else if (opcoes == 5) {
                                 conta.setLogoutMenu(true);
                                 conta.setLogoutVerificacao(true);
                                 conta.setLogoutConta(true);
