@@ -1,4 +1,4 @@
-package com.mycompany.striker_quest;
+package com.mycompany.teste_bd;
 
 /**
  * Classe TelaInicio
@@ -21,7 +21,7 @@ public class TelaGol extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         opcao1Button = new javax.swing.JButton();
@@ -58,20 +58,11 @@ public class TelaGol extends javax.swing.JFrame {
         getContentPane().add(opcao4Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 590, 190));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cris e gol img.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1760, 1040));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1760, 1040));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * Método main para teste
-     * 
-     * Este método main é usado para testar a exibição da tela.
-     * 
-     * Ele não pertence ao projeto final do jogo.
-     * 
-     * @param args argumentos da linha de comando
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
