@@ -64,7 +64,6 @@ public class TelaAdmin extends javax.swing.JFrame {
         fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(null);
 
@@ -73,6 +72,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         botaoSairConta1.setText("SAIR DA CONTA");
         botaoSairConta1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botaoSairConta1.setContentAreaFilled(false);
+        botaoSairConta1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoSairConta1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botaoSairConta1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,13 +80,14 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botaoSairConta1);
-        botaoSairConta1.setBounds(740, 970, 210, 90);
+        botaoSairConta1.setBounds(730, 860, 210, 90);
 
         botaoPontuacoes.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         botaoPontuacoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botoes.png"))); // NOI18N
         botaoPontuacoes.setText("VER PONTUAÇÕES");
         botaoPontuacoes.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botaoPontuacoes.setContentAreaFilled(false);
+        botaoPontuacoes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoPontuacoes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botaoPontuacoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +95,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botaoPontuacoes);
-        botaoPontuacoes.setBounds(980, 970, 210, 90);
+        botaoPontuacoes.setBounds(970, 860, 210, 90);
 
         idTexto1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         idTexto1.setText("SEU ID DE PROFESSOR:");
@@ -127,6 +128,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         cadastrarTurma.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cadastrarTurma.setText("CADASTRAR");
         cadastrarTurma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        cadastrarTurma.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarTurma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarTurmaActionPerformed(evt);
@@ -148,6 +150,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         cadastrarAluno.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cadastrarAluno.setText("CADASTRAR");
         cadastrarAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        cadastrarAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarAlunoActionPerformed(evt);
@@ -211,6 +214,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         cadastrarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cadastrarPergunta.setText("CADASTRAR");
         cadastrarPergunta.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        cadastrarPergunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarPergunta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarPerguntaActionPerformed(evt);

@@ -33,7 +33,6 @@ public class TelaInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(null);
 
@@ -42,6 +41,7 @@ public class TelaInicial extends javax.swing.JFrame {
         botaoJogar.setText("JOGAR");
         botaoJogar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botaoJogar.setContentAreaFilled(false);
+        botaoJogar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoJogar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botaoJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +56,7 @@ public class TelaInicial extends javax.swing.JFrame {
         botaoSair.setText("SAIR");
         botaoSair.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         botaoSair.setContentAreaFilled(false);
+        botaoSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botaoSair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botaoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

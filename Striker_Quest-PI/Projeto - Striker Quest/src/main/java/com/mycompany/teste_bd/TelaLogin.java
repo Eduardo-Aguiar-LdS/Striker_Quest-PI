@@ -156,25 +156,30 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(turmaAluno);
         turmaAluno.setBounds(800, 720, 320, 50);
 
+        r.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         r.setText("RG:");
         getContentPane().add(r);
         r.setBounds(810, 626, 70, 30);
 
+        n.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         n.setText("NOME:");
         getContentPane().add(n);
-        n.setBounds(810, 560, 60, 16);
+        n.setBounds(810, 560, 60, 20);
 
+        s.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         s.setText("SENHA:");
         getContentPane().add(s);
-        s.setBounds(810, 640, 70, 16);
+        s.setBounds(810, 640, 70, 20);
 
+        e.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         e.setText("E-MAIL:");
         getContentPane().add(e);
-        e.setBounds(810, 560, 60, 16);
+        e.setBounds(810, 560, 60, 20);
 
+        t.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         t.setText("TURMA:");
         getContentPane().add(t);
-        t.setBounds(810, 700, 70, 16);
+        t.setBounds(810, 700, 70, 20);
 
         botaoConfirmaAluno.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         botaoConfirmaAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botoes.png"))); // NOI18N
