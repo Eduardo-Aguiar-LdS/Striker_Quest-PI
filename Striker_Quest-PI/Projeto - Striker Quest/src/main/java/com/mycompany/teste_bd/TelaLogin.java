@@ -6,7 +6,7 @@ package com.mycompany.teste_bd;
 
 /**
  *
- * @author Morbius
+ * @author gustavo
  */
 public class TelaLogin extends javax.swing.JFrame {
 
@@ -16,12 +16,12 @@ public class TelaLogin extends javax.swing.JFrame {
     public TelaLogin() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.mostrarTelaPrinc();
+        this.mostrarOpcaoAlunoOuProf();
     }
 
-    public void mostrarTelaPrinc(){
-        botaoEntrarAluno.setVisible(true);
-        botaoEntrarProfessor.setVisible(true);
+    public void mostrarOpcaoAlunoOuProf(){
+        botaoEntrarComoAluno.setVisible(true);
+        botaoEntrarComoProfessor.setVisible(true);
         e.setVisible(false);//aqueles textos em cima das caixas de input
         s.setVisible(false);
         r.setVisible(false);
@@ -37,9 +37,9 @@ public class TelaLogin extends javax.swing.JFrame {
         botaoVolta.setVisible(false);
     }
     
-    public void mostrarTelaAluno(){
-        botaoEntrarAluno.setVisible(false);
-        botaoEntrarProfessor.setVisible(false);
+    public void mostrarTelaLoginAluno(){
+        botaoEntrarComoAluno.setVisible(false);
+        botaoEntrarComoProfessor.setVisible(false);
         e.setVisible(false);//aqueles textos em cima das caixas de input
         s.setVisible(false);
         r.setVisible(true);
@@ -55,9 +55,9 @@ public class TelaLogin extends javax.swing.JFrame {
         botaoVolta.setVisible(true);
     }
     
-    public void mostrarTelaProf(){
-        botaoEntrarAluno.setVisible(false);
-        botaoEntrarProfessor.setVisible(false);
+    public void mostrarTelaLoginProf(){
+        botaoEntrarComoAluno.setVisible(false);
+        botaoEntrarComoProfessor.setVisible(false);
         e.setVisible(true);//aqueles textos em cima das caixas de input
         s.setVisible(true);
         r.setVisible(false);
@@ -77,8 +77,8 @@ public class TelaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        botaoEntrarAluno = new javax.swing.JButton();
-        botaoEntrarProfessor = new javax.swing.JButton();
+        botaoEntrarComoAluno = new javax.swing.JButton();
+        botaoEntrarComoProfessor = new javax.swing.JButton();
         emailProf1 = new javax.swing.JTextField();
         rgAluno = new javax.swing.JTextField();
         nomeAluno = new javax.swing.JTextField();
@@ -98,35 +98,35 @@ public class TelaLogin extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(null);
 
-        botaoEntrarAluno.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        botaoEntrarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botoes.png"))); // NOI18N
-        botaoEntrarAluno.setText("ALUNO");
-        botaoEntrarAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        botaoEntrarAluno.setContentAreaFilled(false);
-        botaoEntrarAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoEntrarAluno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botaoEntrarAluno.addActionListener(new java.awt.event.ActionListener() {
+        botaoEntrarComoAluno.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
+        botaoEntrarComoAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botoes.png"))); // NOI18N
+        botaoEntrarComoAluno.setText("ALUNO");
+        botaoEntrarComoAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        botaoEntrarComoAluno.setContentAreaFilled(false);
+        botaoEntrarComoAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoEntrarComoAluno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botaoEntrarComoAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoEntrarAlunoActionPerformed(evt);
+                botaoEntrarComoAlunoActionPerformed(evt);
             }
         });
-        getContentPane().add(botaoEntrarAluno);
-        botaoEntrarAluno.setBounds(630, 600, 280, 100);
+        getContentPane().add(botaoEntrarComoAluno);
+        botaoEntrarComoAluno.setBounds(630, 600, 280, 100);
 
-        botaoEntrarProfessor.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        botaoEntrarProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botoes.png"))); // NOI18N
-        botaoEntrarProfessor.setText("PROFESSOR");
-        botaoEntrarProfessor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        botaoEntrarProfessor.setContentAreaFilled(false);
-        botaoEntrarProfessor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoEntrarProfessor.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botaoEntrarProfessor.addActionListener(new java.awt.event.ActionListener() {
+        botaoEntrarComoProfessor.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
+        botaoEntrarComoProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/botoes.png"))); // NOI18N
+        botaoEntrarComoProfessor.setText("PROFESSOR");
+        botaoEntrarComoProfessor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        botaoEntrarComoProfessor.setContentAreaFilled(false);
+        botaoEntrarComoProfessor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoEntrarComoProfessor.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botaoEntrarComoProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoEntrarProfessorActionPerformed(evt);
+                botaoEntrarComoProfessorActionPerformed(evt);
             }
         });
-        getContentPane().add(botaoEntrarProfessor);
-        botaoEntrarProfessor.setBounds(1010, 600, 280, 100);
+        getContentPane().add(botaoEntrarComoProfessor);
+        botaoEntrarComoProfessor.setBounds(1010, 600, 280, 100);
 
         emailProf1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,9 +230,9 @@ public class TelaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoEntrarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarAlunoActionPerformed
-        mostrarTelaAluno();
-    }//GEN-LAST:event_botaoEntrarAlunoActionPerformed
+    private void botaoEntrarComoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarComoAlunoActionPerformed
+        mostrarTelaLoginAluno();
+    }//GEN-LAST:event_botaoEntrarComoAlunoActionPerformed
 
     private void emailProf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailProf1ActionPerformed
         // TODO add your handling code here:
@@ -240,10 +240,18 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void botaoConfirmaProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmaProfActionPerformed
         Professor prof = dadosProf(); //RETORNA UM PROFESSOR C OS DADOS INSERIDOS
+        //codigo para confimar dados
+        TelaAdmin t = new TelaAdmin();
+        t.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoConfirmaProfActionPerformed
 
     private void botaoConfirmaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmaAlunoActionPerformed
         Jogador aluno = dadosAluno();//RETORNA UM ALUNO C OS DADOS INSERIDOS
+        //codigo para confimar dados
+        TelaInicial t = new TelaInicial();
+        t.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoConfirmaAlunoActionPerformed
 
     private void nomeAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeAlunoActionPerformed
@@ -254,12 +262,12 @@ public class TelaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rgAlunoActionPerformed
 
-    private void botaoEntrarProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarProfessorActionPerformed
-        mostrarTelaProf();
-    }//GEN-LAST:event_botaoEntrarProfessorActionPerformed
+    private void botaoEntrarComoProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarComoProfessorActionPerformed
+        mostrarTelaLoginProf();
+    }//GEN-LAST:event_botaoEntrarComoProfessorActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
-        mostrarTelaPrinc();
+        mostrarOpcaoAlunoOuProf();
     }//GEN-LAST:event_botaoVoltaActionPerformed
 
     public Professor dadosProf(){ //pega dados das caixas de texto
@@ -313,8 +321,8 @@ public class TelaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoConfirmaAluno;
     private javax.swing.JButton botaoConfirmaProf;
-    private javax.swing.JButton botaoEntrarAluno;
-    private javax.swing.JButton botaoEntrarProfessor;
+    private javax.swing.JButton botaoEntrarComoAluno;
+    private javax.swing.JButton botaoEntrarComoProfessor;
     private javax.swing.JButton botaoVolta;
     private javax.swing.JLabel e;
     private javax.swing.JTextField emailProf1;
