@@ -353,7 +353,7 @@ public class TelaAdmin extends javax.swing.JFrame {
     public Pergunta novaPergunta(){
         String pergunta = perguntaP.getText();
         int id_professor = Integer.parseInt(idProfPergunta.getText());
-        return new Pergunta(pergunta, id_professor);
+        return new Pergunta();
     }
     
     public Resposta novaResposta(){

@@ -12,13 +12,23 @@ public class Pergunta {
     private int algarismo_um;
     private int algarismo_dois;
     private String operador;
-
+    
+    /**
+     * 
+     * @param pergunta
+     * @return 
+     */
     public String fazerPergunta(Pergunta pergunta) {
         Random rand = new Random();
+        // Gerar aleatoriamente os números
         algarismo_um = rand.nextInt(1, 20);
         algarismo_dois = rand.nextInt(0, 20);
+        
+        // Escolher aleatoriamente uma operação (soma ou subtração)
         operador = "+-";
         char escolhaOperador = operador.charAt(rand.nextInt(operador.length()));
+        
+        // Garantir que o resultado nunca dê um número negativo
         if (algarismo_um >= algarismo_dois) {
             List<Integer> lista_alternativas = new ArrayList<Integer>();
             lista_alternativas.add(algarismo_um + algarismo_dois);
