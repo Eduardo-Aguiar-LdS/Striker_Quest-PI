@@ -9,7 +9,7 @@ senha varchar(50) not null,
 email varchar(50) not null unique, 
 rg_professor varchar(20) not null unique);
 -- describe Professor;
--- insert into Professor(nome_professor, senha, email, rg_professor) values('teste', 'teste', 'teste', 'teste');
+insert into Professor(nome_professor, senha, email, rg_professor) values('teste', 'teste', 'teste', 'teste');
 select * from Professor;
 
 create table Turma (
@@ -18,7 +18,7 @@ nome_turma varchar(30) not null unique,
 id_professor int,
 foreign key(id_professor) references Professor(id_professor));
 -- describe Turma;
--- insert into Turma (nome_turma, id_professor) values (teste, 1);
+insert into Turma (nome_turma, id_professor) values ('teste', 1);
 select * from Turma;
 
 create table Jogador (
@@ -30,5 +30,5 @@ maior_pontuacao int,
 id_turma int,
 foreign key(id_turma) references Turma(id_turma));
 -- describe Jogador;
--- insert into Jogador (nome_jogador, rg, id_turma) values (teste, teste, 1);
+insert into Jogador (nome_jogador, rg, id_turma) values ('teste', 'teste', 1);
 select * from Jogador;
