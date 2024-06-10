@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 public class ConnectionFactory {
     private static String host = "mysql-3077d70b-poo-imt-ap10-2024.k.aivencloud.com";
     private static String porta = "19862";
-    private static String db = "teste";
+    private static String db = "striker_quest";
     private static String usuario = "avnadmin";
     private static String senha = "AVNS_DJ4ArJCcuL6fQgn2jdS";
     
