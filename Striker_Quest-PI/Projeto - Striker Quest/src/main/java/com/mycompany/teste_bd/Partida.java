@@ -8,9 +8,7 @@ import java.util.ArrayList; // Importação da classe do tipo de dado lista
 /**
  * Classe Partida
  *
- * Esta classe é responsável por gerenciar a partida em andamento. Seus
- * atributos e métodos descrevem as ações que o sistema deve realizar durante
- * uma partida.
+ * Esta classe é responsável por gerenciar a partida em andamento. Seus atributos e métodos descrevem as ações que o sistema deve realizar durante uma partida.
  *
  * As instâncias dessa classe são as partidas em andamento e armazenam
  * informações como a pontuação atual, os bontos Bônus.
@@ -19,8 +17,6 @@ public class Partida {
 
     // Atributos
     /**
-     * Atributo nomePartida
-     *
      * Este atributo deve armazenar o nome da partida.
      */
     private String nomePartida;
@@ -110,16 +106,12 @@ public class Partida {
     private int chances = 3;
 
     /**
-     * Atributo pontuacaoPartida
-     *
      * Este atributo armazena a quantidade de pontos que foram ganhos na
      * partida.
      */
     private int pontuacaoPartida = 0;
 
     /**
-     * Atributo bonusAtivo
-     *
      * Este atributo diz se o bônus está ativo no jogo, sendo usado para definir
      * se o jogador ganhará (ou não) pontos bônus.
      *
@@ -128,14 +120,13 @@ public class Partida {
     private boolean bonusAtivo = true;
 
     /**
-     * Atributo pontuacaoBonus
-     *
      * Este atributo armazena a quantidade de pontos bônus que foram ganhos na
      * partida.
      */
     private int pontuacaoBonus = 0;
 
     // Métodos
+    
     /**
      * Método iniciarPartida
      *
@@ -147,8 +138,6 @@ public class Partida {
     }
 
     /**
-     * Método finalizarPartida
-     *
      * Este método é responsável por realizar as ações que marcam o fim da
      * partida, como registrar a pontuação.
      */
@@ -157,8 +146,6 @@ public class Partida {
     }
 
     /**
-     * Método somarPontos
-     *
      * Este método é responsável por alterar o atributo pontuacaoDaPartida,
      * adicionando/subtraindo pontos.
      *
@@ -170,8 +157,6 @@ public class Partida {
     }
 
     /**
-     * Método somarBonus
-     *
      * Este método é responsável por alterar o atributo pontuacaoBonus,
      * adicionando pontos bônus caso o bônus esteja ativo.
      */
@@ -179,8 +164,6 @@ public class Partida {
     }
 
     /**
-     * Método desativaBonus
-     *
      * Este método é responsável por definir o atributo bonusAtivo como false
      * caso o jogador erre alguma vez, desativando o bônus.
      */

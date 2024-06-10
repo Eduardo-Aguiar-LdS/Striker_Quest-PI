@@ -23,8 +23,9 @@ public class Pergunta {
         // Gerar aleatoriamente os números
         algarismo_um = rand.nextInt(1, 20);
         algarismo_dois = rand.nextInt(0, 20);
-        
+       
         // Escolher aleatoriamente uma operação (soma ou subtração)
+        
         operador = "+-";
         char escolhaOperador = operador.charAt(rand.nextInt(operador.length()));
         
