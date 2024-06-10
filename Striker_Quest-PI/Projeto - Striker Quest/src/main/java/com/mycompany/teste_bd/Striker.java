@@ -106,22 +106,11 @@ public class Striker {
                                 while (contador <= 2 || num_perguntas <= 15) {
                                     // Jogo mostra pergunta e resposta
                                     int id_pergunta = Integer.parseInt("Colocar um numero aleatorio"); // Colocar um
-<<<<<<< Updated upstream
-                                                                                                       // numero
-                                                                                                       // aletorio
-                                    Pergunta perguntas = new Pergunta(id_pergunta);
-                                    perguntas.exibirPergunta(perguntas);
-=======
                                     // numero
                                     // aletorio
                                    // Pergunta perguntas = new Pergunta(id_pergunta);
                                     //perguntas.exibirPergunta(perguntas);
->>>>>>> Stashed changes
                                     Resposta resposta = new Resposta();
-                                    resposta.exibirRespostaCorreta(perguntas);
-                                    resposta.exibirRespostaUm(perguntas);
-                                    resposta.exibirRespostaDois(perguntas);
-                                    resposta.exibirRespostaTres(perguntas);
                                     // Jogador escolhe a resposta
                                     int id_resposta = Integer.parseInt("Selecionar id da resposta"); // Colocar o id da
                                                                                                      // pergunta
